@@ -1,0 +1,271 @@
+*{
+  padding: 0%;
+  margin: 0%;
+}
+.weather-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+  padding: 1rem;
+  align-items: stretch;
+  margin: 7px auto;
+  width: 90%;  
+}
+
+
+.left-panel
+{
+  background-color: #FAFAFA;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 2.5;
+}
+.right-panel {
+  background-color: #F6F6F6;
+  padding: 1rem;
+  margin-left: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 0.9;
+  text-align: center;
+}
+
+.location-date {
+  display: flex;
+  justify-content:space-around;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.temperature-main {
+  font-size: 200px;
+  text-align: center;
+  color: #696969;
+}
+
+.weather-details{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #555;
+  font-weight: bold;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.weather-status {
+  text-align: center;
+  font-size: 34px;
+  color: #888;
+}
+.forecast {
+  display: flex;
+  gap: 3rem;
+  margin-top: 10px;
+}
+.forecast-item {
+  text-align: center;
+  padding: 1rem;
+  font-size: 16px;
+  color: #666;
+}
+.forecast-item-today{
+  margin-left: 100px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
+.day{
+  color:#262626;
+  font-weight: bold;
+}
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search-bar {
+  display: flex;
+  margin-bottom: 20px;
+}
+.search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  width: 150px;
+  outline: none;
+}
+.search-button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #555;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.greeting {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.time {
+  font-size: 16px;
+  font-weight: bold;
+}
+.current-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 38px;
+  color:#696969 ;
+}
+.temp2 {
+  font-size: 14px;
+  color: #3f3b3b73;
+}
+.hourly-forecast {
+  margin-top: 20px;
+  width: 100%;
+}
+.hourly-forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.hourly-forecast h4 {
+  font-size: 1rem;
+  color: #4b5563;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.hour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+.hourly-forecast {
+  margin-top: 2rem;
+}
+.temp{
+  color:#6B6B6B;
+  font-size: 28px;
+  font-weight: bold;
+}
+.weather-day{
+  color: #BDBDBD;
+}
+.timing{
+  color: #262626;
+}
+.deg{
+  font-size: 28px;
+  color: #6B6B6B;
+}
+
+@media (max-width: 1024px) {
+  .weather-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .left-panel, .right-panel {
+    width: 100%;
+    padding: 1.5rem;
+    margin: 0;
+  }
+
+  .temperature-main {
+    font-size: 120px;
+  }
+
+  .forecast, .hourly-forecast-grid {
+    gap: 1.5rem;
+  }
+
+  .forecast-item, .forecast-item-today {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .weather-details {
+    font-size: 12px;
+  }
+
+  .hourly-forecast-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .weather-container {
+    padding: 0.5rem;
+    height: 2000px;
+  }
+
+  .left-panel, .right-panel {
+    padding: 1rem;
+    
+  }
+
+  .temperature-main {
+    font-size: 80px;
+  }
+
+  .forecast, .hourly-forecast-grid {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .forecast-item, .forecast-item-today, .hour {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .search-input, .search-button {
+    font-size: 0.875rem;
+  }
+
+  .greeting, .time, .current-weather {
+    font-size: 1rem;
+  }
+
+  .temp, .deg {
+    font-size: 20px;
+  }
+}
+
+.weather-dashboard {
+  display: flex;
+}
+
+.country-dropdown {
+  width: 100%; 
+  padding: 8px;
+  margin: 8px 0;
+  font-size: 16px;
+  border: 2px solid #ccc; 
+  border-radius: 4px;
+  background-color: #f9f9f9
+}

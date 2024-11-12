@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	
+	* {
+		box-sizing: border-box;
+		font-family: "Raleway", sans-serif;
+	}
+    body{
+        display:contents;
+        justify-content: center;
+    }
+    
+}
